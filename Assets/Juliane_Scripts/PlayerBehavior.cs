@@ -10,10 +10,12 @@ public class PlayerBehavior : MonoBehaviour
     public Rigidbody2D rb2D;
     public int score = 0;
     public GameObject bullet;
+    public int bpm = 120;
+
     // Start is called before the first frame update
     void Start()
     {
-
+         transform.DOMoveY(200, 1 ).SetLoops(-1, LoopType.Yoyo);
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
