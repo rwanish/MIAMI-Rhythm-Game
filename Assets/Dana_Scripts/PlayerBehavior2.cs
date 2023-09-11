@@ -10,6 +10,9 @@ public class PlayerBehavior2 : MonoBehaviour
     public Rigidbody2D rb2D;
     public int score = 0;
     public GameObject bullet;
+    public AudioClip coinSound;
+    public AudioClip tirSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +22,7 @@ public class PlayerBehavior2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "CollectableItem")
         {
+            AudioEngine.instance.PlaySound(coinSound);
             Destroy(collision.gameObject);
             score++;
         }
@@ -49,6 +53,7 @@ public class PlayerBehavior2 : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            AudioEngine.instance.PlaySound(tirSound);
             Instantiate(bullet, transform.localPosition, Quaternion.identity);
         }
     }
