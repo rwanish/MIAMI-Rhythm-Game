@@ -6,7 +6,7 @@ public class ChronoManager2 : MonoBehaviour
 {
     public float timer = 0f;
     public float maxTime = 1f;
-    public ColorChange letterToChangeColor;
+    public ColorChange2 letterToChangeColor;
 
     // Start is called before the first frame update
     void Start()

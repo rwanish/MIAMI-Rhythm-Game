@@ -18,6 +18,7 @@ public class PlayerBehavior2 : MonoBehaviour
     {
 
     }
+
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "CollectableItem")
@@ -27,6 +28,7 @@ public class PlayerBehavior2 : MonoBehaviour
             score++;
         }
     }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -49,7 +51,8 @@ public class PlayerBehavior2 : MonoBehaviour
         }
         rb2D.MovePosition(newPos);
     }
-    private void Update()
+
+    public void Fire()
     {
         if (Input.GetButtonDown("Fire1"))
         {
@@ -57,6 +60,10 @@ public class PlayerBehavior2 : MonoBehaviour
             Instantiate(bullet, transform.localPosition, Quaternion.identity);
         }
     }
+     private void Update()
+     {
+        Fire();
+     }
 
 }
 
