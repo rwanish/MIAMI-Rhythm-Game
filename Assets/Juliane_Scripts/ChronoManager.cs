@@ -7,6 +7,8 @@ public class ChronoManager : MonoBehaviour
     public float timer = 0f;
     public float maxTime = 1f;
     public ColorChange letterToChangeColor;
+    public M1Behavior M1;
+    public M2Behavior M2;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +27,8 @@ public class ChronoManager : MonoBehaviour
             {
                 letterToChangeColor.SwitchColor();
             }
+            M1.RotateM1();
+            M2.RotateM2();
             timer = 0f; // reset timer
         }
     }
