@@ -556,6 +556,8 @@ MonoBehaviour:
   timer: 0
   maxTime: 1
   letterToChangeColor: {fileID: 1107646051}
+  M1: {fileID: 1096947676}
+  M2: {fileID: 2005998556}
 --- !u!4 &608572243
 Transform:
   m_ObjectHideFlags: 0
@@ -789,6 +791,7 @@ GameObject:
   - component: {fileID: 1096947673}
   - component: {fileID: 1096947674}
   - component: {fileID: 1096947675}
+  - component: {fileID: 1096947676}
   m_Layer: 0
   m_Name: M1
   m_TagString: Destructable
@@ -902,6 +905,18 @@ PolygonCollider2D:
       - {x: -61.916668, y: -42.25}
       - {x: 61.916668, y: -42.25}
       - {x: 61.916668, y: 42.25}
+--- !u!114 &1096947676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096947672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da46a6a595ff2a4aa603aa951dcb910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1107646048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1639,6 +1654,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2005998553}
   - component: {fileID: 2005998554}
+  - component: {fileID: 2005998556}
   - component: {fileID: 2005998555}
   m_Layer: 0
   m_Name: M2
@@ -1753,6 +1769,18 @@ PolygonCollider2D:
       - {x: -61.916668, y: -42.25}
       - {x: 61.916668, y: -42.25}
       - {x: 61.916668, y: 42.25}
+--- !u!114 &2005998556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005998552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d703b525a0d28a649b1f86d7fdf15a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8174973037698670078
 PrefabInstance:
   m_ObjectHideFlags: 0
