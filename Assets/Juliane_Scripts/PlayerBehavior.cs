@@ -15,7 +15,7 @@ public class PlayerBehavior : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-         transform.DOMoveY(200, 1 ).SetLoops(-1, LoopType.Yoyo);
+     
     }
     void OnCollisionEnter2D(Collision2D collision)
     {

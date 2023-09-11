@@ -554,8 +554,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: 0
-  maxTime: 1
+  maxTime: 2
+  timer2: 1
   letterToChangeColor: {fileID: 1107646051}
+  M1: {fileID: 1096947676}
+  M2: {fileID: 2005998556}
 --- !u!4 &608572243
 Transform:
   m_ObjectHideFlags: 0
@@ -667,6 +670,7 @@ GameObject:
   - component: {fileID: 649670684}
   - component: {fileID: 649670682}
   - component: {fileID: 649670686}
+  - component: {fileID: 649670687}
   m_Layer: 0
   m_Name: DotI1
   m_TagString: Destructable
@@ -689,7 +693,7 @@ Rigidbody2D:
   m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 20
+  m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: a0a782138bbc01c4996dbd4b86b078bc, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -778,6 +782,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 19.75
+--- !u!114 &649670687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649670681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92334ad3d2691324a8bdf39b36d9e88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 100
+  rb2D: {fileID: 649670682}
+  score: 0
+  bullet: {fileID: 5537010663095876873, guid: fd645964b11391f4dbba3ee2900042e8, type: 3}
+  bpm: 120
 --- !u!1 &1096947672
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,6 +810,7 @@ GameObject:
   - component: {fileID: 1096947673}
   - component: {fileID: 1096947674}
   - component: {fileID: 1096947675}
+  - component: {fileID: 1096947676}
   m_Layer: 0
   m_Name: M1
   m_TagString: Destructable
@@ -902,6 +924,18 @@ PolygonCollider2D:
       - {x: -61.916668, y: -42.25}
       - {x: 61.916668, y: -42.25}
       - {x: 61.916668, y: 42.25}
+--- !u!114 &1096947676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096947672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8da46a6a595ff2a4aa603aa951dcb910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1107646048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1498,9 +1532,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2003175461}
   - component: {fileID: 2003175460}
-  - component: {fileID: 2003175459}
   - component: {fileID: 2003175462}
   - component: {fileID: 2003175463}
+  - component: {fileID: 2003175464}
   m_Layer: 0
   m_Name: DotPlayer
   m_TagString: Untagged
@@ -1508,23 +1542,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2003175459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003175458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92334ad3d2691324a8bdf39b36d9e88f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 50
-  rb2D: {fileID: 2003175462}
-  score: 0
-  bullet: {fileID: 5537010663095876873, guid: fd645964b11391f4dbba3ee2900042e8, type: 3}
-  bpm: 120
 --- !u!212 &2003175460
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1629,6 +1646,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 19.75
+--- !u!114 &2003175464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003175458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8365b678be4ce42a317b4b4c141a11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2005998552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1640,6 +1669,7 @@ GameObject:
   - component: {fileID: 2005998553}
   - component: {fileID: 2005998554}
   - component: {fileID: 2005998555}
+  - component: {fileID: 2005998556}
   m_Layer: 0
   m_Name: M2
   m_TagString: Destructable
@@ -1753,6 +1783,18 @@ PolygonCollider2D:
       - {x: -61.916668, y: -42.25}
       - {x: 61.916668, y: -42.25}
       - {x: 61.916668, y: 42.25}
+--- !u!114 &2005998556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005998552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d703b525a0d28a649b1f86d7fdf15a17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8174973037698670078
 PrefabInstance:
   m_ObjectHideFlags: 0

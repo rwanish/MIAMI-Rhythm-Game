@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class ChronoManager : MonoBehaviour
 {
     public float timer = 0f;
-    public float maxTime = 1f;
+    public float maxTime = 2f;
+    public float timer2 = 1f;
     public ColorChange letterToChangeColor;
     public M1Behavior M1;
     public M2Behavior M2;
@@ -20,16 +22,28 @@ public class ChronoManager : MonoBehaviour
     void Update()
     {
         timer = timer + Time.deltaTime; // or timer += Time.deltaTime
+        timer2 = timer2 + Time.deltaTime; // or timer2 += Time.deltaTime
 
-        if (timer > maxTime) // if timer is greater than 1 second
+        if (timer > maxTime) // if timer is greater than 2 second
+        {
+            if (letterToChangeColor != null)
+            {
+                letterToChangeColor.SwitchColor();
+            }
+            
+
+            M2.RotateM2();
+
+            timer = 0f; // reset timer
+        }
+        if (timer2 > maxTime) // if timer is greater than 2 second
         {
             if (letterToChangeColor != null)
             {
                 letterToChangeColor.SwitchColor();
             }
             M1.RotateM1();
-            M2.RotateM2();
-            timer = 0f; // reset timer
+            timer2 = 0f; // reset timer
         }
     }
 }
