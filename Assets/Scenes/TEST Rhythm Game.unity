@@ -1486,7 +1486,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d44ef38a01efa0b418d8052415c341e4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 92f657aa7204779458430a3cc8d76eab, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1601,8 +1601,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicStream: {fileID: 1654059269}
   soundStream: {fileID: 1654059272}
-  bpm: 70
+  bpm: 100
   signature: 4
+  timeMusic: 0
   weakTempoEvent:
     m_PersistentCalls:
       m_Calls:
@@ -1633,6 +1634,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  nbBPM: 0
 --- !u!82 &1654059272
 AudioSource:
   m_ObjectHideFlags: 0
