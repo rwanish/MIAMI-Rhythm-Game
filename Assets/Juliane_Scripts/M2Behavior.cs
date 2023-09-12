@@ -34,4 +34,11 @@ public class M2Behavior : MonoBehaviour
             angle = angle - 90;
         }
     }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            transform.rotation = Quaternion.Euler(Vector3.forward * 0);
+        }
+    }
 }

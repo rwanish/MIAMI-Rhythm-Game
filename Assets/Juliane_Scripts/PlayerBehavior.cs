@@ -24,6 +24,7 @@ public class PlayerBehavior : MonoBehaviour
             Destroy(collision.gameObject);
             score++;
         }
+      
     }
     // Update is called once per frame
     void FixedUpdate()

@@ -23,15 +23,22 @@ public class M1Behavior : MonoBehaviour
     {
         if (angle <= 270)
         {
-            
+
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-           angle = angle + 90;
+            angle = angle + 90;
         }
         else
         {
             angle = 90;
             transform.rotation = Quaternion.Euler(Vector3.forward * angle);
             angle = angle + 90;
+        }
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            transform.rotation = Quaternion.Euler(Vector3.forward * 0);
         }
     }
 }
