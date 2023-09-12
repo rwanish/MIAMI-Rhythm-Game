@@ -62,7 +62,7 @@ public class PlayerBehavior2 : MonoBehaviour
     }
      private void Update()
      {
-        Fire();
+
      }
 
 }

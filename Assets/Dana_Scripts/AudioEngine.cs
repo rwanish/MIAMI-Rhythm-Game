@@ -9,12 +9,17 @@ public class AudioEngine : MonoBehaviour
 
     public AudioSource musicStream;
     public AudioSource soundStream;
-    public int bpm;
-    public int signature;
+    public int bpm = 70;
+    public int signature = 4;
+
+    public float timeMusic = 0f;
+    float nextBPMTimeCode = 0f;
 
     // 2 variables pour la détection d'un temps fort et d'un temps faible
     public UnityEvent weakTempoEvent;
     public UnityEvent strongTempoEvent;
+
+    public int nbBPM = 0;
 
 
     void Awake()
@@ -40,16 +45,19 @@ public class AudioEngine : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Strong tempo computation : TO DO !
-        if (false) // Change with a real condition : TO DO !
+        timeMusic = musicStream.time;
+        // Strong tempo
+         if ( nbBPM % signature == 0) 
         {
             strongTempoEvent.Invoke();
         }
 
-        // Weak tempo computation : TO DO !
-        if (false) // Change with a real condition : TO DO !
+        // Weak tempo 
+        if (timeMusic > nextBPMTimeCode) 
         {
             weakTempoEvent.Invoke();
+            nextBPMTimeCode = nextBPMTimeCode + 60f / bpm;
+            nbBPM++;
         }
     }
 }
