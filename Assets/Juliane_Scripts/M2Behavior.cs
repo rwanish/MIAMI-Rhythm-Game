@@ -38,7 +38,12 @@ public class M2Behavior : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            transform.rotation = Quaternion.Euler(Vector3.forward * 0);
+            angle = 0;
+            transform.rotation = Quaternion.Euler(Vector3.forward * angle);
         }
+    }
+    public int ValueAngle()
+    {
+        return angle;
     }
 }
