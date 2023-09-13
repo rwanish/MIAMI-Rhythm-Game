@@ -484,6 +484,7 @@ GameObject:
   - component: {fileID: 123598273}
   - component: {fileID: 123598275}
   - component: {fileID: 123598271}
+  - component: {fileID: 123598276}
   - component: {fileID: 123598270}
   m_Layer: 0
   m_Name: DotPlayer
@@ -589,7 +590,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123598269}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 247.81378, y: 176.7843, z: 0}
+  m_LocalPosition: {x: 283, y: 57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -614,6 +615,18 @@ MonoBehaviour:
   bullet: {fileID: 5537010663095876873, guid: fd645964b11391f4dbba3ee2900042e8, type: 3}
   coinSound: {fileID: 8300000, guid: 10677615f68df9441bc249ad141c7580, type: 3}
   tirSound: {fileID: 8300000, guid: 0c4d4aa8f917f6b458639651266a8b17, type: 3}
+--- !u!114 &123598276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123598269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e168b37a66476264eb5749af3cccc03e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &263101716
 GameObject:
   m_ObjectHideFlags: 0
