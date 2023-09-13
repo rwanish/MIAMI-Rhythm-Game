@@ -24,26 +24,29 @@ public class ChronoManager : MonoBehaviour
         timer = timer + Time.deltaTime; // or timer += Time.deltaTime
         timer2 = timer2 + Time.deltaTime; // or timer2 += Time.deltaTime
 
-        if (timer > maxTime) // if timer is greater than 2 second
+        while (M1.ValueAngle() != 0 && M2.ValueAngle() != 0)
         {
-            if (letterToChangeColor != null)
+            if (timer > maxTime) // if timer is greater than 2 second
             {
-                letterToChangeColor.SwitchColor();
+                if (letterToChangeColor != null)
+                {
+                    letterToChangeColor.SwitchColor();
+                }
+
+
+                M2.RotateM2();
+
+                timer = 0f; // reset timer
             }
-            
-
-            M2.RotateM2();
-
-            timer = 0f; // reset timer
-        }
-        if (timer2 > maxTime) // if timer is greater than 2 second
-        {
-            if (letterToChangeColor != null)
+            if (timer2 > maxTime) // if timer is greater than 2 second
             {
-                letterToChangeColor.SwitchColor();
+                if (letterToChangeColor != null)
+                {
+                    letterToChangeColor.SwitchColor();
+                }
+                M1.RotateM1();
+                timer2 = 0f; // reset timer
             }
-            M1.RotateM1();
-            timer2 = 0f; // reset timer
         }
     }
 }
