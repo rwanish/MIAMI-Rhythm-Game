@@ -23,10 +23,7 @@ public class M1Rotation : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             transform.rotation = Quaternion.Euler(Vector3.forward * 0);
-            while (rotation >= 0)
-            {
-                rotation = rotation + Time.deltaTime;
-            }
+            
             
         }
     }
