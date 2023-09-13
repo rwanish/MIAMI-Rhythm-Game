@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 48158485}
   m_Layer: 0
   m_Name: DotI1
-  m_TagString: Destructable
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -482,13 +482,13 @@ GameObject:
   m_Component:
   - component: {fileID: 123598274}
   - component: {fileID: 123598273}
-  - component: {fileID: 123598275}
   - component: {fileID: 123598271}
   - component: {fileID: 123598276}
+  - component: {fileID: 123598277}
   - component: {fileID: 123598270}
   m_Layer: 0
   m_Name: DotPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -597,24 +597,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &123598275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 123598269}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95edb7ca1c547f04b9a4b1871764bb86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 50
-  rb2D: {fileID: 123598271}
-  score: 0
-  bullet: {fileID: 5537010663095876873, guid: fd645964b11391f4dbba3ee2900042e8, type: 3}
-  coinSound: {fileID: 8300000, guid: 10677615f68df9441bc249ad141c7580, type: 3}
-  tirSound: {fileID: 8300000, guid: 0c4d4aa8f917f6b458639651266a8b17, type: 3}
 --- !u!114 &123598276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +609,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e168b37a66476264eb5749af3cccc03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &123598277
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123598269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95edb7ca1c547f04b9a4b1871764bb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 150
+  rb2D: {fileID: 48158486}
+  score: 0
+  bullet: {fileID: 5537010663095876873, guid: fd645964b11391f4dbba3ee2900042e8, type: 3}
+  coinSound: {fileID: 8300000, guid: 10677615f68df9441bc249ad141c7580, type: 3}
+  tirSound: {fileID: 8300000, guid: 0c4d4aa8f917f6b458639651266a8b17, type: 3}
 --- !u!1 &263101716
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1154,7 @@ GameObject:
   - component: {fileID: 1269872913}
   - component: {fileID: 1269872915}
   - component: {fileID: 1269872914}
+  - component: {fileID: 1269872916}
   m_Layer: 0
   m_Name: M2
   m_TagString: Destructable
@@ -1267,6 +1268,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1269872916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269872912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35fc0c596c1f81a40a0ebe5c00b5f09c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1357147900
 GameObject:
   m_ObjectHideFlags: 0
@@ -1635,7 +1648,7 @@ MonoBehaviour:
   strongTempoEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 123598275}
+      - m_Target: {fileID: 123598277}
         m_TargetAssemblyTypeName: PlayerBehavior2, Assembly-CSharp
         m_MethodName: Fire
         m_Mode: 1
@@ -1648,6 +1661,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   nbBPM: 0
+  M1: {fileID: 1701792655}
+  M2: {fileID: 1269872916}
 --- !u!82 &1654059272
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1754,6 +1769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1701792652}
   - component: {fileID: 1701792654}
+  - component: {fileID: 1701792655}
   - component: {fileID: 1701792653}
   m_Layer: 0
   m_Name: M1
@@ -1868,6 +1884,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1701792655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701792651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4cc53818a0b1914c86069ae952db529, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1782983400
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,7 +3,11 @@ guid: 95edb7ca1c547f04b9a4b1871764bb86
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb2D: {instanceID: 0}
+  - bullet: {fileID: 5537010663095876873, guid: fd645964b11391f4dbba3ee2900042e8, type: 3}
+  - coinSound: {fileID: 8300000, guid: 10677615f68df9441bc249ad141c7580, type: 3}
+  - tirSound: {fileID: 8300000, guid: 0c4d4aa8f917f6b458639651266a8b17, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

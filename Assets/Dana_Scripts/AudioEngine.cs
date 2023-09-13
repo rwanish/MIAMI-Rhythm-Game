@@ -20,6 +20,8 @@ public class AudioEngine : MonoBehaviour
     public UnityEvent strongTempoEvent;
 
     public int nbBPM = 0;
+    public M1Rotation M1;
+    public M2Rotation M2;
 
 
     void Awake()
@@ -50,6 +52,8 @@ public class AudioEngine : MonoBehaviour
          if ( nbBPM % signature == 0) 
         {
             strongTempoEvent.Invoke();
+            M2.M2Wheel();
+
         }
 
         // Weak tempo 
@@ -58,6 +62,10 @@ public class AudioEngine : MonoBehaviour
             weakTempoEvent.Invoke();
             nextBPMTimeCode = nextBPMTimeCode + 60f / bpm;
             nbBPM++;
+
+            M1.M1Wheel();
+
+
         }
     }
 }
