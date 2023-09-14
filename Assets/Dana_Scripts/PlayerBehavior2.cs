@@ -8,10 +8,7 @@ public class PlayerBehavior2 : MonoBehaviour
 {
     public float speed = 100f;
     public Rigidbody2D rb2D;
-    public int score = 0;
-    public GameObject bullet;
-    public AudioClip coinSound;
-    public AudioClip tirSound;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -19,15 +16,7 @@ public class PlayerBehavior2 : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "CollectableItem")
-        {
-            AudioEngine.instance.PlaySound(coinSound);
-            Destroy(collision.gameObject);
-            score++;
-        }
-    }
+    
 
     // Update is called once per frame
     void FixedUpdate()
@@ -52,14 +41,7 @@ public class PlayerBehavior2 : MonoBehaviour
         rb2D.MovePosition(newPos);
     }
 
-    public void Fire()
-    {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            AudioEngine.instance.PlaySound(tirSound);
-            Instantiate(bullet, transform.localPosition, Quaternion.identity);
-        }
-    }
+    
      private void Update()
      {
 

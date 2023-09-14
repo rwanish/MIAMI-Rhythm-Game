@@ -7,8 +7,10 @@ public class M1Rotation : MonoBehaviour
 {
     float rotation = 90;
 
+    public AudioClip coinSound;
+
     public float coolDown = 5f;
-    public float durationCoolDown = 5f;
+    public float durationCoolDown = 2f;
     
 
     // Start is called before the first frame update
@@ -27,13 +29,19 @@ public class M1Rotation : MonoBehaviour
         if (coolDown > 0f) return;
         if (DOTween.IsTweening(transform)) return;
         transform.DORotate(transform.eulerAngles + new Vector3(0, 0, rotation), 1);
+        AudioEngine.instance.PlaySound(coinSound);
     }
+
+
+
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (coolDown > 0f) return;
         if (collision.gameObject.tag == "Player")
         {
+      
+
             transform.DOKill();
             transform.DORotate(new Vector3(0, 0, 0), 1);
 

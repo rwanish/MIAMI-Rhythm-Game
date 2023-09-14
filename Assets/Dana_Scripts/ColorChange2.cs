@@ -40,6 +40,6 @@ public class ColorChange2 : MonoBehaviour
     // Automatically called by Unity when a user click on the current gameObject (as long as it has a collider attached)
     private void OnMouseDown()
     {
-        SwitchColor();
+        //SwitchColor();
     }
 }

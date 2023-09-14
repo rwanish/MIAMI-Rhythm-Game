@@ -5,16 +5,48 @@ using DG.Tweening;
 
 public class M2Rotation : MonoBehaviour
 {
+    public AudioClip coinSound;
+    float rotation = -90;
+
+    public float coolDown = 0f;
+    public float durationCoolDown = 2f;
+
+
     // Start is called before the first frame update
     void Start()
     {
 
     }
 
+    private void Update()
+    {
+        coolDown -= Time.deltaTime;
+    }
+
+
     public void M2Wheel()
     {
+       
+        if (coolDown > 0f) return;
         if (DOTween.IsTweening(transform)) return;
-        transform.DORotate(transform.eulerAngles + new Vector3(0, 0, -90), 1);
+        transform.DORotate(transform.eulerAngles + new Vector3(0, 0, rotation), 1);
+        AudioEngine.instance.PlaySound(coinSound);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (coolDown > 0f) return;
+        if (collision.gameObject.tag == "Player")
+        {
+            
+
+
+            transform.DOKill();
+            transform.DORotate(new Vector3(0, 0, 0), 1);
+
+            coolDown = durationCoolDown;
+        }
     }
 
 }

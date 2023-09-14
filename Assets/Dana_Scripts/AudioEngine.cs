@@ -48,6 +48,7 @@ public class AudioEngine : MonoBehaviour
     void Update()
     {
         timeMusic = musicStream.time;
+
         // Strong tempo
          if ( nbBPM % signature == 0) 
         {

@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 2813a6de1008e7347a78a6fe31acb89b
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - triangle: {fileID: 6658199045570768535, guid: 6f184a03ddf2ff14687c9c0556def18e, type: 3}
+  - tirSound: {fileID: 8300000, guid: 0c4d4aa8f917f6b458639651266a8b17, type: 3}
+  - rb2D: {fileID: 6658199045570768534, guid: 6f184a03ddf2ff14687c9c0556def18e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
